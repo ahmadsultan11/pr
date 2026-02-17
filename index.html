@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>السيرة النبوية</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
     <style>
         /* --- 1. تنسيقات الـ CSS --- */
         body {
@@ -157,6 +162,38 @@
                 text-align: right;
             }
         
+
+
+
+            /* تحسين شكل الحاويات لتناسب الشاشات الصغيرة */
+.page {
+    padding: 20px 15px; /* تقليل الهوامش الجانبية */
+}
+
+/* تحسين شكل الأزرار (القائمة) لتكون عريضة وسهلة اللمس */
+.menu-item {
+    width: 90%; /* تأخذ معظم عرض الشاشة */
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px; /* زوايا دائرية أكثر نعومة */
+    font-size: 1.1rem;
+}
+
+/* جعل الشريط السفلي مرناً جداً */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom); /* لدعم هواتف آيفون الحديثة */
+}
+
+.nav-item {
+    flex: 1;
+    font-size: 0.8rem; /* تصغير الخط قليلاً ليناسب العرض */
+}
+
+
     </style>
 </head>
 <body>
