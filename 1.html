@@ -157,7 +157,19 @@ p {
         }
 
         
-        
+        .video-container {
+    width: 90%;          /* يأخذ 90% من عرض الشاشة */
+    max-width: 500px;    /* أقصى عرض لكي لا يظهر ضخماً على الشاشات الكبيرة */
+    margin: 20px auto;   /* توسيط الفيديو في الصفحة */
+    border-radius: 15px; /* زوايا دائرية */
+    overflow: hidden;    /* لقص أطراف الفيديو لتتبع الزوايا الدائرية */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* ظل خفيف لإبراز الفيديو */
+}
+
+video {
+    width: 100%;         /* جعل الفيديو يملأ الحاوية */
+    display: block;
+}
         
 
     </style>
@@ -191,6 +203,14 @@ p {
             <p></p>
             <p></p>
             <p></p>
+            <div class="video-container">
+    <video controls poster="img/video-cover.jpg">
+        <source src="img/w1d1.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+</div>
+
+
         </div>
 
         <div id="day2" class="day-content">
