@@ -7,6 +7,8 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 </style>
@@ -19,13 +21,29 @@
 
     <style>
         /* --- 1. تنسيقات الـ CSS --- */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fafafa;
-            padding-bottom: 70px; /* مساحة للشريط السفلي */
-        }
+       body {
+    margin: 0;
+    padding: 0;
+    /* لجعل الصفحة بطول الشاشة بالضبط ومنع التمرير الزائد بسبب الخلفية */
+    height: 100vh; 
+    overflow-x: hidden; /* منع الاهتزاز الجانبي */
+    
+    font-family: 'Cairo', sans-serif; /* الخط العربي الذي اتفقنا عليه */
 
+    /* تنسيق الصورة لتكون 100% */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('img/26d53806260895011188f39637f8acb2.jpg');
+    background-size: cover;      /* تغطية الشاشة بالكامل */
+    background-position: center; /* تجميع الصورة في المنتصف */
+    background-repeat: no-repeat;/* عدم تكرار الصورة نهائياً */
+    background-attachment: fixed;/* تثبيت الخلفية */
+}
+
+/* لضمان أن المحتوى لا يختفي تحت الشريط السفلي */
+.page {
+    height: calc(100vh - 65px); /* طرح طول الشريط السفلي */
+    overflow-y: auto; /* السماح بالتمرير داخل الصفحة فقط إذا كان النص طويلاً */
+}
         /* تنسيق الصفحات */
         .page {
             display: none; /* إخفاء كل الصفحات */
@@ -100,7 +118,7 @@
             color: #fc0505;
              margin-top: 50px;
             
-             font-size: 40px  ;
+             font-size: 50px  ;
              /*text-shadow: 2px 5px 6px#262626;*/
             font-family: "aref ruqaa", sans-serif;
 
